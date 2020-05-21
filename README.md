@@ -24,7 +24,9 @@ The Alert component's Wrapper styled component utilizes conditional styling to d
 
 The NewTidbit container has full unit testing.
 
-Testing Note:
-  Test the NewTidbit container with
-    `jest "NewTidbit"`
-  Running `npm test` will run all tests, throwing errors for there not being any tests for some components.
+#### Testing Note:
+You can test just the NewTidbit container with:
+
+* `jest "NewTidbit"`
+
+Running `npm test` will run all tests, throwing errors for there not being any tests for some components. 
