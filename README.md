@@ -9,7 +9,7 @@ This is a fork of the react-boilerplate repo for purposes of the take-home scree
 4. Navigate on browser to localhost:3000/
 
 ## You'll want the backend too!
-It's found at ""
+It's found at https://github.com/DSom20/tidbits-backend
 To get it started:
 1. Clone repo and `cd` into it
 2. `npm install`
