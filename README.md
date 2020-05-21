@@ -20,7 +20,7 @@ The backend starts by default on port 5000
 ## Technologies Used
 Among others, this project utilizes React Router, Redux, React Sagas, Reselect, Styled Components, and React Testing Library
 
-The Alert styled component utilizes conditional styling to determine whether it is green/red based on given props.
+The Alert component's Wrapper styled component utilizes conditional styling to determine whether it is green/red based on given props.
 
 The NewTidbit container has full unit testing.
 
