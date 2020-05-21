@@ -1,6 +1,6 @@
 // /**
 //  *
-//  * Tests for HomePage
+//  * Tests for NewTidbit
 //  *
 //  * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
 //  *
@@ -11,16 +11,16 @@
 // import { IntlProvider } from 'react-intl';
 // // import 'jest-dom/extend-expect'; // add some helpful assertions
 
-// import { HomePage } from '../index';
+// import { NewTidbit } from '../index';
 // import { DEFAULT_LOCALE } from '../../../i18n';
 
-// describe('<HomePage />', () => {
+// describe('<NewTidbit />', () => {
 //   it('Expect to not log errors in console', () => {
 //     const spy = jest.spyOn(global.console, 'error');
 //     const dispatch = jest.fn();
 //     render(
 //       <IntlProvider locale={DEFAULT_LOCALE}>
-//         <HomePage dispatch={dispatch} />
+//         <NewTidbit dispatch={dispatch} />
 //       </IntlProvider>,
 //     );
 //     expect(spy).not.toHaveBeenCalled();
@@ -40,7 +40,7 @@
 //       container: { firstChild },
 //     } = render(
 //       <IntlProvider locale={DEFAULT_LOCALE}>
-//         <HomePage />
+//         <NewTidbit />
 //       </IntlProvider>,
 //     );
 //     expect(firstChild).toMatchSnapshot();
