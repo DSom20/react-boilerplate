@@ -15,6 +15,7 @@ import NewTidbit from 'containers/NewTidbit/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 import NavBar from 'components/NavBar/index';
+import Wrapper from './Wrapper';
 
 import GlobalStyle from '../../global-styles';
 
@@ -22,11 +23,13 @@ export default function App() {
   return (
     <div>
       <NavBar />
-      <Switch>
-        <Route exact path="/new" component={NewTidbit} />
-        <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <Wrapper>
+        <Switch>
+          <Route exact path="/new" component={NewTidbit} />
+          <Route exact path="/" component={HomePage} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </Wrapper>
       <GlobalStyle />
     </div>
   );

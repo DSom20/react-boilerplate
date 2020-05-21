@@ -26,6 +26,8 @@ import saga from './saga';
 import messages from './messages';
 import Form from './Form';
 import Input from './Input';
+import MainArticle from '../../components/MainArticle';
+import Button from '../../components/Button';
 import FeedbackSection from '../../components/FeedbackSection';
 
 const key = domainKey;
@@ -45,7 +47,7 @@ export function NewTidbit({
   useEffect(() => onUnmount, []);
 
   return (
-    <article>
+    <MainArticle>
       <Helmet>
         <title>Add a New Tidbit</title>
         <meta name="description" content="Add a new Tidbit on this page!" />
@@ -66,9 +68,9 @@ export function NewTidbit({
               onChange={onChangeTidbit}
             />
           </label>
-          <button type="submit" disabled={saving}>
+          <Button type="submit" disabled={saving}>
             Submit Tidbit!
-          </button>
+          </Button>
         </Form>
         <FeedbackSection
           loading={saving}
@@ -78,7 +80,7 @@ export function NewTidbit({
           errorMessage="There was a problem saving your tidbit. Please try again."
         />
       </section>
-    </article>
+    </MainArticle>
   );
 }
 

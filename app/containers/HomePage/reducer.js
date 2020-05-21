@@ -30,7 +30,7 @@ const homePageReducer = (state = initialState, action) =>
         draft.tidbits = action.tidbits;
         draft.fetching = false;
         draft.resulted = true;
-        // draft.error = null;
+        draft.error = false;
         break;
       case FETCH_TIDBITS_FAILURE:
         draft.fetching = false;

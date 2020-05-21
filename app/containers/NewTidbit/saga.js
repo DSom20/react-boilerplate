@@ -7,9 +7,7 @@ import {
 } from './constants';
 import { saveTidbitSuccess, saveTidbitFailure } from './actions';
 import { selectTidbit } from './selectors';
-import * as API from '../../utils/API'; // wanted to declare as class in API file,
-// but static methods lost this context somehow when called in here, even when calling
-// on class...
+import * as API from '../../utils/API';
 
 // Individual exports for testing
 export default function* newTidbitSaga() {
@@ -31,8 +29,8 @@ export default function* newTidbitSaga() {
 
 export function* attemptToPost(tidbit) {
   try {
-    // Reducer isn't doing anything with response right now. But necessary for
-    // testing to trigger an error
+    // Reducer isn't doing anything with response right now. But might be helpful
+    // at some point
     const response = yield call(API.addNewTidbit, tidbit);
     yield put(saveTidbitSuccess(response));
   } catch (error) {

@@ -2,8 +2,8 @@
  *
  * Tests for NewTidbit
  *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
+ * Note: still could write more, such as testing if appropriate text appears
+ * on the page given certain props.
  */
 
 import React from 'react';
@@ -15,9 +15,6 @@ import { browserHistory } from 'react-router-dom';
 
 import { NewTidbit, mapDispatchToProps } from '../index';
 import { changeTidbit, saveTidbit, resetTidbit } from '../actions';
-// import { DEFAULT_LOCALE } from '../../../i18n';
-// import { changeUsername } from '../actions';
-// import { loadRepos } from '../../App/actions';
 import configureStore from '../../../configureStore';
 
 describe('<NewTidbit />', () => {
@@ -29,7 +26,6 @@ describe('<NewTidbit />', () => {
 
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    // const dispatch = jest.fn();
     render(
       <Provider store={store}>
         <IntlProvider locale="en">

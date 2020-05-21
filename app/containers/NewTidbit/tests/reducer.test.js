@@ -76,6 +76,8 @@ describe('newTidbitReducer', () => {
       const tidbit = 'cool';
       const expectedResult = produce(state, draft => {
         draft.tidbit = tidbit;
+        draft.resulted = false;
+        draft.error = false;
       });
       expect(newTidbitReducer(state, changeTidbit(tidbit))).toEqual(
         expectedResult,
@@ -91,18 +93,4 @@ describe('newTidbitReducer', () => {
       );
     });
   });
-
-  /**
-   * Example state change comparison
-   *
-   * it('should handle the someAction action correctly', () => {
-   *   const expectedResult = produce(state, draft => {
-   *     draft.loading = true;
-   *     draft.error = false;
-   *     draft.userData.nested = false;
-   *   });
-   *
-   *   expect(appReducer(state, someAction())).toEqual(expectedResult);
-   * });
-   */
 });

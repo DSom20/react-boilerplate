@@ -24,7 +24,7 @@ const initialState = {
 };
 
 /*
-  Expected key for this domain on parent/global state object. Used, eg, by useInjectReducer
+  The expected key for this domain on parent/global state object. Used, eg, by useInjectReducer
 */
 const domainKey = 'newTidbit';
 
@@ -44,8 +44,6 @@ const domainKey = 'newTidbit';
   for immer produce don't care about return value. So could have default to just
   break...but just unnecessary
 
-  Currently not doing anything with payload of SAVE_TIDBIT_SUCCESS, SAVE_TIDBIT_FAILURE
-  actions
 */
 const newTidbitReducer = (state = initialState, action) =>
   produce(state, draft => {
@@ -53,8 +51,11 @@ const newTidbitReducer = (state = initialState, action) =>
       case CHANGE_TIDBIT:
         // Backup mechanism to prevent user from changing tidbit during save process
         // (Initial mechanism is to disable input HTML element while saving)
+        // Also, might as well reset resulted/error to get rid of any alerts
         if (!draft.saving) {
           draft.tidbit = action.tidbit;
+          draft.resulted = false;
+          draft.error = false;
         }
         break;
       case SAVE_TIDBIT:

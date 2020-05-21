@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<NewTidbit /> Should render and match the snapshot 1`] = `
-<article>
+<article
+  class="MainArticle-y120ve-0 hnCSrZ"
+>
   <h1>
     <span>
       Enter a new tidbit on this page!
@@ -19,7 +21,7 @@ exports[`<NewTidbit /> Should render and match the snapshot 1`] = `
           Enter Tidbit: 
         </span>
         <input
-          class="Input-fnidfs-0 bXmxGP"
+          class="Input-fnidfs-0 bKhaBX"
           id="tidbit"
           placeholder="Whatever tidbit you can think of!"
           type="text"
@@ -27,12 +29,15 @@ exports[`<NewTidbit /> Should render and match the snapshot 1`] = `
         />
       </label>
       <button
+        class="Button-sc-1fkoyq4-0 hzQuaY"
         type="submit"
       >
         Submit Tidbit!
       </button>
     </form>
-    <div />
+    <div
+      class="Wrapper-sc-6bivht-0 keiqAv"
+    />
   </section>
 </article>
 `;

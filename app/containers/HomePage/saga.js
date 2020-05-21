@@ -1,4 +1,4 @@
-import { call, put, takeLatest, cancelled } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 
 import { FETCH_TIDBITS } from './constants';
 import { fetchTidbitsSuccess, fetchTidbitsFailure } from './actions';
@@ -15,10 +15,11 @@ function* fetchTidbitsSaga() {
     yield put(fetchTidbitsSuccess(tidbits));
   } catch (error) {
     yield put(fetchTidbitsFailure()); // could dispatch actual error/message...
-  } finally {
-    if (yield cancelled()) {
-      // Don't really need anything here, since the only way it will be cancelled
-      // is via another FETCH_TIDBITS action
-    }
   }
+  // finally {
+  //   if (yield cancelled()) {
+  //     // Don't really need anything here, since the only way it will be cancelled
+  //     // is via another FETCH_TIDBITS action
+  //   }
+  // }
 }

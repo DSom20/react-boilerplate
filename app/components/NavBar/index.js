@@ -9,19 +9,21 @@ import React from 'react';
 // import styled from 'styled-components';
 
 import { FormattedMessage } from 'react-intl';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import messages from './messages';
+import Wrapper from './Wrapper';
+import StyledNavLink from './StyledNavLink';
 
 function NavBar() {
   return (
-    <nav>
-      <NavLink to="/">
+    <Wrapper>
+      <StyledNavLink exact to="/">
         <FormattedMessage {...messages.homeLinkMessage} />
-      </NavLink>
-      <NavLink to="/new">
+      </StyledNavLink>
+      <StyledNavLink exact to="/new">
         <FormattedMessage {...messages.newTidbitLinkMessage} />
-      </NavLink>
-    </nav>
+      </StyledNavLink>
+    </Wrapper>
   );
 }
 

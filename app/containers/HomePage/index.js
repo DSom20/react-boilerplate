@@ -26,6 +26,8 @@ import saga from './saga';
 import messages from './messages';
 import FeedbackSection from '../../components/FeedbackSection';
 import TidbitsList from '../../components/TidbitsList';
+import MainArticle from '../../components/MainArticle';
+import Button from '../../components/Button';
 
 const key = 'home';
 
@@ -53,7 +55,7 @@ export function HomePage({
   }
 
   return (
-    <article>
+    <MainArticle>
       <Helmet>
         <title>Tidbits</title>
         <meta name="description" content="See all the tidbits here!" />
@@ -62,9 +64,9 @@ export function HomePage({
         <FormattedMessage {...messages.header} />
       </h1>
       <section>
-        <button type="button" onClick={fetchTidbitsFromAPI} disabled={fetching}>
+        <Button type="button" onClick={fetchTidbitsFromAPI} disabled={fetching}>
           Refresh list of tidbits
-        </button>
+        </Button>
         <FeedbackSection
           loading={fetching}
           resulted={resulted}
@@ -74,7 +76,7 @@ export function HomePage({
         />
         {tidbitsListSection}
       </section>
-    </article>
+    </MainArticle>
   );
 }
 

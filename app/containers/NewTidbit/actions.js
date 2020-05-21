@@ -44,9 +44,3 @@ export function resetTidbit() {
     type: RESET_TIDBIT,
   };
 }
-
-// export function defaultAction() {
-//   return {
-//     type: DEFAULT_ACTION,
-//   };
-// }

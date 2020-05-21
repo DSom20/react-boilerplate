@@ -6,9 +6,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-// import styled from 'styled-components';
 import LoadingIndicator from '../LoadingIndicator';
 import Alert from '../Alert';
+import Wrapper from './Wrapper';
 
 function FeedbackSection({
   loading,
@@ -25,7 +25,7 @@ function FeedbackSection({
   } else if (resulted && error) {
     content = <Alert type="error" message={errorMessage} />;
   }
-  return <div>{content}</div>;
+  return <Wrapper>{content}</Wrapper>;
 }
 
 FeedbackSection.propTypes = {

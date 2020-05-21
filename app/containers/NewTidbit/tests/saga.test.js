@@ -21,8 +21,6 @@ import {
 } from '../actions';
 import * as API from '../../../utils/API';
 
-// const generator = newTidbitSaga();
-
 describe('attemptToPost Saga', () => {
   const tidbit = 'sweet';
   const attemptToPostGenerator = cloneableGenerator(attemptToPost)(tidbit);
