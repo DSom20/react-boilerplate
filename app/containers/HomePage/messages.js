@@ -13,4 +13,13 @@ export default defineMessages({
     id: `${scope}.header`,
     defaultMessage: 'Welcome to the Home of All the Best Tidbits!',
   },
+  // Need to review react-intl docs to figure out best way to use these
+  fetchSuccess: {
+    id: `${scope}.fetchSuccess`,
+    defaultMessage: 'Tidbits up to date!',
+  },
+  fetchFailure: {
+    id: `${scope}.fetchFailure`,
+    defaultMessage: 'Problem fetching tidbits. Please try again.',
+  },
 });

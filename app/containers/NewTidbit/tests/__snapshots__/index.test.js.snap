@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewTidbit /> Should render and match the snapshot 1`] = `
+<article>
+  <h1>
+    <span>
+      Enter a new tidbit on this page!
+    </span>
+  </h1>
+  <section>
+    <form
+      class="Form-sc-66efnp-0 kwWrFk"
+      data-testid="tidbitForm"
+    >
+      <label
+        for="tidbit"
+      >
+        <span>
+          Enter Tidbit: 
+        </span>
+        <input
+          class="Input-fnidfs-0 bXmxGP"
+          id="tidbit"
+          placeholder="Whatever tidbit you can think of!"
+          type="text"
+          value=""
+        />
+      </label>
+      <button
+        type="submit"
+      >
+        Submit Tidbit!
+      </button>
+    </form>
+    <div />
+  </section>
+</article>
+`;

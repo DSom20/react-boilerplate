@@ -54,7 +54,7 @@ export function NewTidbit({
         <FormattedMessage {...messages.header} />
       </h1>
       <section>
-        <Form onSubmit={onSubmitForm}>
+        <Form onSubmit={onSubmitForm} data-testid="tidbitForm">
           <label htmlFor="tidbit">
             <FormattedMessage {...messages.label} />
             <Input
@@ -99,7 +99,7 @@ const mapStateToProps = createStructuredSelector({
   error: makeSelectError(),
 });
 
-function mapDispatchToProps(dispatch) {
+export function mapDispatchToProps(dispatch) {
   return {
     onChangeTidbit: evt => dispatch(changeTidbit(evt.target.value)),
     onSubmitForm: evt => {

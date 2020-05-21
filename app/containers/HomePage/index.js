@@ -11,7 +11,6 @@ import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
-import { v4 as uuidv4 } from 'uuid';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
@@ -26,6 +25,7 @@ import reducer from './reducer';
 import saga from './saga';
 import messages from './messages';
 import FeedbackSection from '../../components/FeedbackSection';
+import TidbitsList from '../../components/TidbitsList';
 
 const key = 'home';
 
@@ -42,6 +42,15 @@ export function HomePage({
   useEffect(() => {
     fetchTidbitsFromAPI();
   }, []);
+
+  let tidbitsListSection;
+  if (resulted && !error && tidbits.length === 0) {
+    tidbitsListSection = (
+      <h3>There are no tidbits yet. Write the first tidbit!</h3>
+    );
+  } else if (tidbits.length > 0) {
+    tidbitsListSection = <TidbitsList tidbits={tidbits} />;
+  }
 
   return (
     <article>
@@ -63,21 +72,7 @@ export function HomePage({
           successMessage="Tidbits up to date!"
           errorMessage="Problem fetching tidbits. Please try again."
         />
-        {/* <div>{fetching ? 'Fetching...' : ''}</div>
-        <div>{error ? 'Error' : ''}</div> */}
-        <div>
-          {resulted && !error && tidbits.length === 0
-            ? 'No Tidbits yet! Add the first tidbit!'
-            : ''}
-        </div>
-        <div>
-          {/* eslint-disable indent */
-          tidbits.length > 0
-            ? tidbits.map(tidbitString => (
-                <div key={uuidv4()}>{tidbitString}</div>
-              ))
-            : ''}
-        </div>
+        {tidbitsListSection}
       </section>
     </article>
   );
