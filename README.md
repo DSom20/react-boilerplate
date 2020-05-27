@@ -7,15 +7,7 @@ This is a fork of the react-boilerplate repo for purposes of the take-home scree
 2. `npm install`
 3. `npm start`
 4. Navigate on browser to localhost:3000/
-
-## You'll want the backend too!
-It's found at https://github.com/DSom20/tidbits-backend
-To get it started:
-1. Clone repo and `cd` into it
-2. `npm install`
-3. `npm start`
-
-The backend starts by default on port 5000
+(5. Previously there was a separate backend api app to run. Now it is incorporated into the frontend server.)
 
 ## Technologies Used
 This project utilizes React Router, Redux, React Sagas, Reselect, Styled Components, and React Testing Library, among others.
